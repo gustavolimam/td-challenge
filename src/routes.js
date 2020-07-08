@@ -35,7 +35,7 @@ routes.put("/teacher/:email", TeacherController.update);
 
 routes.post("/student", StudentController.create);
 routes.get("/student/:email", StudentController.readStudent);
-routes.get("/student", StudentController.readStudent);
+routes.get("/student", StudentController.read);
 routes.delete("/student/:email", StudentController.delete);
 routes.put("/student/:email", StudentController.update);
 
