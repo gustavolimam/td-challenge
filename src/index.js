@@ -1,17 +1,17 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const app = express()
 const server = require('http').Server(app);
 
-mongoose.connect("mongodb://localhost/td",
+mongoose.connect("mongodb://gustavo:tdchallenge1@ds039135.mlab.com:39135/td-challenge",
   {
     useNewUrlParser: true
   }
 );
 
 app.use(express.json());
+
 app.use(require("./routes"));
 
 server.listen(3000, () => {
